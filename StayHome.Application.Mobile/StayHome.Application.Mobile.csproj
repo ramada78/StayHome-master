@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\StayHome.Application.Dashboard\StayHome.Application.Dashboard.csproj" />
+      <ProjectReference Include="..\StayHome.Contracts\StayHome.Contracts.csproj" />
+      <ProjectReference Include="..\StayHome.Domain\StayHome.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Shops\Commands\" />
+    </ItemGroup>
+
+</Project>

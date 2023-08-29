@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\StayHome.Application.Drivers\StayHome.Application.Drivers.csproj" />
+      <ProjectReference Include="..\StayHome.Application.Mobile\StayHome.Application.Mobile.csproj" />
+      <ProjectReference Include="..\StayHome.Infrastructure\StayHome.Infrastructure.csproj" />
+      <ProjectReference Include="..\StayHome.Persistence\StayHome.Persistence.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="StayHome.jpg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Remove="Properties\PublishProfiles\stayhome22-001-site1 - Web Deploy (2).pubxml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="wwwroot\Seed\eedb53c8-771f-415b-9202-2ad5b50918cd_StayHome.jpg" />
+      <Content Remove="wwwroot\Seed\aa0a9617-3106-403d-95ba-a250405ec04c_StayHome.jpg" />
+      <Content Remove="wwwroot\Seed\99c34dd9-4596-4589-a8a8-49cfc8bbf225_StayHome.jpg" />
+      <Content Remove="wwwroot\Uploads\2023-6\c30ddd9d-2ade-4237-8042-8310aea98396Game wallpaper by Black0rWhite - Download on ZEDGE™ _ afe4.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\Seed\" />
+    </ItemGroup>
+
+</Project>
